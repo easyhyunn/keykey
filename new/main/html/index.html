@@ -57,31 +57,30 @@
             <div class="search-wrap">
                 <div class="search-input"><span><input type="text" class="search-text" title="" placeholder="이력번호를 입력해주세요." inputmode = "none" oninput="onlyAlphaNum(this)" /> <a href="" class="search-btn"><i class="ri-search-line"></i><span>검색</span></a></span></div>
                 <p class="check"><i class="ri-information-line"></i> 현재 <span><em>0</em>자리</span>를 입력하셨습니다.</p>
-                <div class="key-wrap">
-                    <div class="numeric-key active">
-                        <button id="numericBtn">소,돼지,닭/오리</button>
+                <div class="key-wrap on">
+                    <div class="key-tab numeric-key ">
+                        <button id="numericBtn" class="tab_btn">소,돼지,닭/오리</button>
                         <div class="key-box">
                             <div class="keyboard-numeric">
-                                <div class="row">
-                                  <button value="1">1</button>
-                                  <button value="2">2</button>
-                                  <button value="3">3</button>
-                                  <button class="confirm-btn">확인</button>
-                                  <button value="4">4</button>
-                                  <button value="5">5</button>
-                                  <button value="6">6</button>
-                                  <button value="7">7</button>
-                                  <button value="8">8</button>
-                                  <button value="9">9</button>
-                                  <button class="close-btn">닫기</button>
-                                  <button value="L">L</button>
-                                  <button value="0">0</button>
-                                  <button value="delete" class="delete-btn"><i class="ri-delete-back-2-line"></i></button>
-                                </div>
+                                <button value="1">1</button>
+                                <button value="2">2</button>
+                                <button value="3">3</button>
+                                <button class="confirm-btn">확인</button>
+                                <button value="4">4</button>
+                                <button value="5">5</button>
+                                <button value="6">6</button>
+                                <button value="7">7</button>
+                                <button value="8">8</button>
+                                <button value="9">9</button>
+                                <button class="close-btn">닫기</button>
+                                <button value="L" class="l-btn">L</button>
+                                <button value="0">0</button>
+                                <button class="delete-btn"><i class="ri-delete-back-2-line"></i></button>
+                            </div>
                         </div>
                     </div>
-                    <div class="eng-key">
-                        <button id="engBtn">계란</button>
+                    <div class="key-tab eng-key active">
+                        <button id="engBtn" class="tab_btn">계란</button>
                         <div class="key-box">
                             <div class="keyboard-eng">
                                 <div class="row">
@@ -131,6 +130,7 @@
                                   <button class="confirm-btn">확인</button>
                                   <button class="close-btn">닫기</button>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
