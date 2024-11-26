@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/*-------------------------------------------------
+title       : 레이아웃
+Author      : PLAN I
+Create date : 2024-11-22
+-------------------------------------------------*/
+.header-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.8rem;
+  padding: 0 2rem;
+}
+.header-wrap .header-set {
+  display: inline-block;
+  padding: 0 1.2rem;
+  line-height: 2.4rem;
+  border-radius: 2.4rem;
+  font-size: 1.3rem;
+  border: 1px solid #e0e0e0;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #eee;
+  border-radius: 3rem 3rem 0 0;
+  padding: 1.8rem;
+  background-color: #fff;
+}
+#footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#footer li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
+  text-align: center;
+}
+#footer li:first-child {
+  color: #005CB2;
+}
+#footer li + li {
+  border-left: 1px solid #eee;
+}
+#footer li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#footer li img {
+  margin-bottom: 1rem;
+}
+#footer li span {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
