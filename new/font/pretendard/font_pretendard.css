@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+@font-face 
+{
+	font-family : 'Pretendard';    
+	font-style 	: normal;    
+	font-weight : 700;
+	src 		: local('Pretendard Bold'), 
+				  url('./file/Pretendard-Bold.woff2') format('woff2'), 
+				  url('./file/Pretendard-Bold.woff') format('woff'),
+				  url('./file/Pretendard-Bold.ttf') format('truetype');
+}
+
+@font-face 
+{
+	font-family : 'Pretendard';    
+	font-style 	: normal;    
+	font-weight : 600;
+	src 		: local('Pretendard SemiBold'), 
+				  url('./file/Pretendard-SemiBold.woff2') format('woff2'), 
+				  url('./file/Pretendard-SemiBold.woff') format('woff'),
+				  url('./file/Pretendard-SemiBold.ttf') format('truetype');
+}
+
+@font-face 
+{
+	font-family : 'Pretendard';    
+	font-style 	: normal;    
+	font-weight : 500;
+	src 		: local('Pretendard Medium'), 
+				  url('./file/Pretendard-Medium.woff2') format('woff2'), 
+				  url('./file/Pretendard-Medium.woff') format('woff'),
+				  url('./file/Pretendard-Medium.ttf') format('truetype');
+}
+
+@font-face 
+{
+	font-family : 'Pretendard';    
+	font-style 	: normal;    
+	font-weight : 300;
+	src 		: local('Pretendard Light'), 
+				  url('./file/Pretendard-Light.woff2') format('woff2'), 
+				  url('./file/Pretendard-Light.woff') format('woff'),
+				  url('./file/Pretendard-Light.ttf') format('truetype');
+}
