@@ -79,10 +79,15 @@ main { padding-bottom: 12rem; }
             i { display: block; width: 100%; height: 4.9rem; text-align: center; font-size: 2rem; }
         }
     }
+    .search-text {
+        &:focus {
+            outline: 2px solid #000;
+        }
+    }
     .check {
         font-size: 1.4rem; font-weight: 500;
         span { color: #005CB2;font-weight: 700; }
-        i {  color: #bbb; }
+        i {  color: #bbb; display: inline-block; vertical-align: middle; }
     }
 }
 

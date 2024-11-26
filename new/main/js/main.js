@@ -25,7 +25,7 @@ function virtualKeyboard(wraper) {
     $key_delete = $('.delete-btn'),
     $outputField = $('.search-text'),
     $currentValue = $outputField.val(),
-    actionKeys = $('.delete-btn');
+    actionKeys = $('.delete-btn, .close-btn, .confirm-btn');
   
   // handle keystrokes
   function _keystroke(keyCase) {
@@ -33,9 +33,9 @@ function virtualKeyboard(wraper) {
       e.preventDefault();
   
       var keyValue = $(this).val();
-      
+
       $('.check em').text(($currentValue.length + 1));
-  
+       
       // grab current value
       var output = $('.search-text').val();
       $outputField.val(output + keyValue);
@@ -80,7 +80,7 @@ $(function() {
   $('.tab_btn').on('click', function() {
     searchInput.val('');
     $('.check em').text('0');
-    
+
     $('.key-tab').removeClass('active');
 
     if ($(this).parents('.key-tab').hasClass('numeric-key')){
@@ -96,6 +96,8 @@ $(function() {
     } else {
       e.preventDefault();
     }
+    const element = document.getElementById('recordNum');
+    element.scrollIntoView({behavior: "smooth", block: "center"});
   });
 
   $('.close-btn').on('click', function() {

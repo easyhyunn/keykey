@@ -183,6 +183,9 @@ main {
   text-align: center;
   font-size: 2rem;
 }
+.search-wrap .search-text:focus {
+  outline: 2px solid #000;
+}
 .search-wrap .check {
   font-size: 1.4rem;
   font-weight: 500;
@@ -193,6 +196,8 @@ main {
 }
 .search-wrap .check i {
   color: #bbb;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .key-wrap {
