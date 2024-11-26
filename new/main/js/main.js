@@ -18,14 +18,6 @@ const banner = () => {
     )
 }
 
-const keyNumCheck = () => {
-
-    $('.search-text').change(function(){
-        
-        console.log($('.search-text').val().length);
-    });
-}
-
 function virtualKeyboard(wraper) {
     var $keyboardWrapper = $(wraper),
     $key = $keyboardWrapper.find('button'),
@@ -52,6 +44,7 @@ function virtualKeyboard(wraper) {
   // delete
   $key_delete.on('click', function (e) {
     e.preventDefault();
+    $currentValue = $outputField.val();
     $outputField.val($currentValue.substr(0, $currentValue.length - 1));
     getCurrentVal();
     focusOutputField();
@@ -83,6 +76,10 @@ $(function() {
   const searchInput = $('.search-text');
   const searchWrap = $('.key-wrap');
 
+
+  searchInput.change(function(){
+      console.log($('.search-text').val().length);
+  });
 
   $('.tab_btn').on('click', function() {
     searchInput.val('');
