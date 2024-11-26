@@ -90,6 +90,14 @@ $(function() {
     }
   });
 
+  $(document).mouseup(function (e){
+    if(searchWrap.has(e.target).length === 0){
+      if(searchWrap.hasClass('on')) {
+        searchWrap.removeClass('on');
+      }
+    }
+  });
+
   searchInput.on('click', function(e) {
     if (searchWrap.hasClass('on') == false){
       searchWrap.addClass('on');
