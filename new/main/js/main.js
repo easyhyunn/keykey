@@ -18,6 +18,7 @@ const banner = () => {
     )
 }
 
+
 function virtualKeyboard(wraper) {
     var $keyboardWrapper = $(wraper),
     $key = $keyboardWrapper.find('button'),
@@ -32,6 +33,8 @@ function virtualKeyboard(wraper) {
       e.preventDefault();
   
       var keyValue = $(this).val();
+      
+      $('.check em').text(($currentValue.length + 1));
   
       // grab current value
       var output = $('.search-text').val();
@@ -44,8 +47,12 @@ function virtualKeyboard(wraper) {
   // delete
   $key_delete.on('click', function (e) {
     e.preventDefault();
-    $currentValue = $outputField.val();
     $outputField.val($currentValue.substr(0, $currentValue.length - 1));
+    if(($currentValue.length - 1) < 1) {
+      $('.check em').text('0');
+    } else {
+      $('.check em').text(($currentValue.length - 1));
+    }
     getCurrentVal();
     focusOutputField();
   });
@@ -64,26 +71,18 @@ function virtualKeyboard(wraper) {
   
 }
 
-function onlyAlphaNum(input) {
-    const regex = /^[A-Za-z0-9]*$/;
-    if (!regex.test(input.value)) {
-        input.value = input.value.replace(/[^A-Za-z0-9]/g, '');
-    }
-}
-
 $(function() {
 
   const searchInput = $('.search-text');
   const searchWrap = $('.key-wrap');
 
 
-  searchInput.change(function(){
-      console.log($('.search-text').val().length);
-  });
-
   $('.tab_btn').on('click', function() {
     searchInput.val('');
+    $('.check em').text('0');
+    
     $('.key-tab').removeClass('active');
+
     if ($(this).parents('.key-tab').hasClass('numeric-key')){
       $('.numeric-key').addClass('active');
     } else if ($(this).parents('.key-tab').hasClass('eng-key')){
@@ -104,7 +103,6 @@ $(function() {
   });
 
   banner();
-  virtualKeyboard('.keyboard-numeric');
-  virtualKeyboard('.keyboard-eng');
+  virtualKeyboard('.keyboard');
     
 });

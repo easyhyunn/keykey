@@ -162,8 +162,9 @@ main {
   display: inline-block;
   width: calc(100% - 4.5rem);
   border: 0 none;
+  padding: 0;
   line-height: 4.9rem;
-  background-color: none;
+  background-color: transparent;
   vertical-align: middle;
   text-transform: uppercase;
 }
@@ -261,38 +262,38 @@ main {
 .key-wrap [class^=keyboard] [class*=-btn] {
   background-color: #22467C;
 }
-.key-wrap .keyboard-numeric {
+.key-wrap .numeric {
   display: grid;
   gap: 0.6rem 0.8rem;
   grid-template-columns: repeat(4, 1fr);
 }
-.key-wrap .keyboard-numeric .confirm-btn {
+.key-wrap .numeric .confirm-btn {
   grid-column: 4/4;
   grid-row: 1/3;
 }
-.key-wrap .keyboard-numeric .close-btn {
+.key-wrap .numeric .close-btn {
   grid-column: 4/4;
   grid-row: 3/5;
 }
-.key-wrap .keyboard-eng .row {
+.key-wrap .eng .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 0.4rem;
 }
-.key-wrap .keyboard-eng .row + .row {
+.key-wrap .eng .row + .row {
   margin-top: 1rem;
 }
-.key-wrap .keyboard-eng .row button {
+.key-wrap .eng .row button {
   width: 10%;
 }
-.key-wrap .keyboard-eng .row button.delete-btn {
+.key-wrap .eng .row button.delete-btn {
   width: 17%;
 }
-.key-wrap .keyboard-eng .row button.confirm-btn {
+.key-wrap .eng .row button.confirm-btn {
   width: 17%;
 }
-.key-wrap .keyboard-eng .row button.close-btn {
+.key-wrap .eng .row button.close-btn {
   width: 17%;
 }
 
